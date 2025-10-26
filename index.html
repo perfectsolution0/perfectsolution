@@ -1,110 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfect Solutionn | Sports & Trading News</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" type="image/png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perfect Solution — Trading & Market News</title>
+  <meta name="description" content="Perfect Solution — Trading education, live sessions and market news." />
+  <style>
+    :root{
+      --bg:#071226; --card:#0f2436; --accent:#00d1ff; --muted:#9fb3c8; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      --radius:12px;
+      --fw: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:32px;font-family:var(--fw);background:linear-gradient(180deg,#031225 0%, #08192b 100%);color:#e8f6ff;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; display:flex;justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--maxw)}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7df6c8);display:flex;align-items:center;justify-content:center;color:#072033;font-weight:700;font-size:18px}
+    .brand h1{margin:0;font-size:18px;letter-spacing:0.4px}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-size:14px}
+    nav a:hover{background:var(--glass);color:#fff}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;margin-bottom:22px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:var(--radius);backdrop-filter:blur(6px)}
+    .hero h2{margin:0 0 8px 0}
+    .hero p{margin:0 0 16px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--accent);color:#002032;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    .tickers{display:flex;flex-direction:column;gap:8px}
+    .ticker{display:flex;justify-content:space-between;padding:10px;border-radius:10px;background:rgba(255,255,255,0.02);font-weight:600}
+    .ticker .sym{opacity:0.9}
+    .ticker .chg.positive{color:#8ef3b1}
+    .ticker .chg.negative{color:#ffb3b3}
+
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+    .news-list{display:grid;gap:12px}
+    .news{background:var(--card);padding:14px;border-radius:12px}
+    .news h3{margin:0 0 8px 0;font-size:16px}
+    .news p{margin:0;color:var(--muted);font-size:14px}
+
+    .sidebar{display:flex;flex-direction:column;gap:12px}
+    .card{background:var(--card);padding:14px;border-radius:12px}
+    .small-list{display:flex;flex-direction:column;gap:8px}
+    .small-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+    footer a{color:var(--muted);text-decoration:none}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      body{padding:16px}
+      .logo{width:48px;height:48px}
+      nav{display:none}
+    }
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(0,0,0,0.2);font-size:12px;color:var(--muted)}
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <!-- Header -->
-  <header class="bg-gray-900 text-white py-6 shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <h1 class="text-2xl font-bold tracking-wide">Perfect Solutionn</h1>
-      <nav class="space-x-6 text-lg">
-        <a href="#sports" class="hover:text-yellow-400">Sports</a>
-        <a href="#trading" class="hover:text-yellow-400">Trading</a>
-        <a href="#contact" class="hover:text-yellow-400">Contact</a>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">PS</div>
+        <div>
+          <h1>Perfect Solution</h1>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Trading education • Market news • Live sessions</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#news">News</a>
+        <a href="#education">Education</a>
+        <a href="#calls">Live Calls</a>
+        <a href="#join" class="cta">Join Telegram</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1505842465776-3bfd188b0e0a?auto=format&fit=crop&w=1600&q=80');">
-    <div class="bg-black bg-opacity-60 p-10 rounded-2xl text-center">
-      <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Stay Ahead in Sports & Trading</h2>
-      <p class="text-lg md:text-xl mb-6">Daily insights, breaking updates, and expert takes — all in one place.</p>
-      <a href="https://t.me/perfectsolutionn" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition">Join on Telegram</a>
-    </div>
-  </section>
-
-  <!-- Sports News -->
-  <section id="sports" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-center">Latest in Sports</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80" alt="Sports" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Big Upset in Football Finals</h3>
-            <p class="text-gray-700">The underdogs rise as they secure a thrilling 3-2 victory in the final moments...</p>
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Welcome to Perfect Solution — your trusted space for trading education and insights.</h2>
+        <p>Our mission is simple: to guide, teach, and empower individuals who are passionate about learning trading strategies and understanding the market better. Perfect Solution is a Telegram community dedicated to educational sessions, live calls, and analytical insights that help traders grow their knowledge. We focus on building confidence through learning — not financial advice — but structured sessions based on market behavior and real-time examples.</p>
+        <div class="images">
+            <img src="https://via.placeholder.com/280x180" alt="Trading Image 1">
+            <img src="https://via.placeholder.com/280x180" alt="Trading Image 2">
+            <img src="https://via.placeholder.com/280x180" alt="Trading Image 3">
           </div>
-        </div>
-        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=80" alt="Cricket" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Cricket Season Heats Up</h3>
-            <p class="text-gray-700">Top teams battle in the league's most competitive season yet. Analysts weigh in...</p>
-          </div>
-        </div>
-        <div class="bg-gray-100 rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=800&q=80" alt="Tennis" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Grand Slam Preview</h3>
-            <p class="text-gray-700">All eyes are on the top seeds as the new tennis season kicks off next week...</p>
-          </div>
+        <ul style="color:var(--muted);line-height:1.6">
+          <li>📊 <strong>Daily Sessions & Calls</strong> — Experience live trading scenarios and improve your decision-making.</li>
+          <li>📘 <strong>Educational Learning</strong> — Learn market structure, candlestick psychology, and risk management.</li>
+          <li>💬 <strong>Community Interaction</strong> — Join thousands of traders who learn and grow together.</li>
+        </ul>
+        <div style="margin-top:18px">
+          <div class="badge">🌐 Connect With Perfect Solution</div>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px">
+            📱 Telegram: <a href="https://t.me/perfectsolutionn" target="_blank">t.me/perfectsolutionn</a><br>
+            📸 Instagram: <a href="https://instagram.com/perfectsolutionn" target="_blank">instagram.com/perfectsolutionn</a><br>
+            🐦 Twitter (X): <a href="https://x.com/perfectslution" target="_blank">x.com/perfectslution</a><br>
+            ▶️ YouTube: <a href="https://youtube.com/@perfectsolutionn" target="_blank">youtube.com/@perfectsolutionn</a>
+          </p>
+          <div class="badge">🧭 Our Vision</div>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px">
+            We believe trading is not gambling — it’s a discipline. Through education, mentorship, and awareness, we aim to help traders build strategies that lead to long-term growth and consistency.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+      
+      <aside class="hero-card">
+        <h4 style="margin:0 0 12px 0">Live Market Snapshot</h4>
+        <div class="tickers">
+          <div class="ticker"><div class="sym">Nifty 50</div><div class="chg positive">+0.82%</div></div>
+          <div class="ticker"><div class="sym">Sensex</div><div class="chg positive">+0.67%</div></div>
+          <div class="ticker"><div class="sym">Dollar INR</div><div class="chg negative">-0.12%</div></div>
+          <div class="ticker"><div class="sym">Gold</div><div class="chg negative">-0.40%</div></div>
+        </div>
 
-  <!-- Trading News -->
-  <section id="trading" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-center">Market & Trading Updates</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Trading" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Stocks Rally on Economic Data</h3>
-            <p class="text-gray-700">Global markets surge as inflation data beats expectations, boosting investor confidence...</p>
-          </div>
+        <div style="margin-top:14px" class="small-list">
+          <div class="small-item"><div>Next live session</div><div style="font-weight:700">Oct 25, 2025</div></div>
+          <div class="small-item"><div>Telegram</div><div>@perfectsolutionn</div></div>
+          <div class="small-item"><div>YouTube</div><div>/perfectsolutionn</div></div>
         </div>
-        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80" alt="Crypto" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Crypto Market Sees a Rebound</h3>
-            <p class="text-gray-700">Bitcoin breaks key resistance as investor sentiment shifts towards recovery...</p>
-          </div>
-        </div>
-        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-          <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?auto=format&fit=crop&w=800&q=80" alt="Forex" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Forex Markets Remain Volatile</h3>
-            <p class="text-gray-700">USD gains while emerging currencies face pressure amid global uncertainties...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </aside>
+    </section>
 
-  <!-- Contact & Social Links -->
-  <section id="contact" class="py-16 bg-gray-900 text-white text-center">
-    <h2 class="text-3xl font-bold mb-6">Connect With Us</h2>
-    <p class="text-gray-300 mb-8">Follow Perfect Solutionn for daily sports and trading insights</p>
-    <div class="flex justify-center space-x-6">
-      <a href="https://t.me/perfectsolutionn" target="_blank" class="bg-blue-500 hover:bg-blue-600 p-4 rounded-full">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" class="w-6 h-6" alt="Telegram">
-      </a>
-      <a href="https://x.com/perfectslution?s=21" target="_blank" class="bg-gray-700 hover:bg-gray-800 p-4 rounded-full">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" class="w-6 h-6" alt="X">
-      </a>
-      <a href="https://www.instagram.com/perfectsolutionn?igsh=dHdyMHgxZXd4djk5&utm_source=qr" target="_blank" class="bg-pink-500 hover:bg-pink-600 p-4 rounded-full">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-6 h-6" alt="Instagram">
-      </a>
-    </div>
-    <p class="mt-8 text-gray-500">© 2025 Perfect Solutionn. All Rights Reserved.</p>
-  </section>
+    <main class="grid">
+      <section id="news" class="news-list">
+        <article class="news">
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3>Market Opens Higher — What To Watch</h3><div class="badge">Analysis</div></div>
+          <p>Early session strength is led by financials and energy. Understand how market structure and liquidity pockets drive intraday moves.</p>
+        </article>
+
+        <article class="news">
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3>Trade Management: Risk First</h3><div class="badge">Education</div></div>
+          <p>Risk management isn’t optional. Learn position-sizing templates and stop-placement techniques used by consistent traders.</p>
+        </article>
+
+        <article class="news">
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3>Session Recap: Live Call — Oct 23</h3><div class="badge">Live Call</div></div>
+          <p>Recap of the live call covering two setups: trend continuation on daily and a mean-reversion scalping idea in futures.</p>
+        </article>
+
+        <article class="news">
+          <div style="display:flex;justify-content:space-between;align-items:center"><h3>Beginner's Corner: Candlestick Psychology</h3><div class="badge">Beginners</div></div>
+          <p>Short primer on high-probability candle patterns and how to interpret them in the context of market structure.</p>
+        </article>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h4 style="margin:0 0 8px 0">Newsletter</h4>
+          <p style="color:var(--muted);margin:0 0 10px 0">Get a concise daily market brief delivered to your inbox.</p>
+          <div style="display:flex;gap:8px">
+            <input placeholder="Email address" style="flex:1;padding:10px;border-radius:8px;border:0;background:#071826;color:#dff6ff" />
+            <button class="cta" style="border:none;cursor:pointer">Subscribe</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px 0">Quick Links</h4>
+          <div class="small-list">
+            <a class="small-item" href="#">Telegram Channel<div style="opacity:0.9">@perfectsolutionn</div></a>
+            <a class="small-item" href="#">YouTube Channel<div style="opacity:0.9">/perfectsolutionn</div></a>
+            <a class="small-item" href="#">Instagram<div style="opacity:0.9">@perfectsolutionn</div></a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© Perfect Solution — Trading education • Not financial advice</div>
+    </footer>
+  </div>
 </body>
 </html>
+
